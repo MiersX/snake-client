@@ -15,6 +15,18 @@ const connect = function() {
 
   conn.on('connect', () => {
     conn.write("Name: MXM");
+     
+  });
+
+  conn.on('connect', () => {
+
+/*
+conn.write("Move: up");
+
+setInterval(() => {
+  conn.write("Move: up");
+}, 50)
+*/
   });
 
   conn.on("data", (message) => {
