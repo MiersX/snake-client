@@ -10,7 +10,7 @@ const setupInput = function(conn) {
   const handleUserInput = function(key) {
     if (key === '\u0003') {
       process.exit();
-    }
+    };
     // w Up
     if (key === '\u0077') {
       conn.write("Move: up");
@@ -26,6 +26,18 @@ const setupInput = function(conn) {
     // d Right
     if (key === '\u0064') {
       conn.write("Move: right");
+    }
+    if (key === '\u0031') {
+      conn.write("Say: GitGud")
+    }
+    if (key === '\u0032') {
+      conn.write("Say: SSSSS")
+    }
+    if (key === '\u0033') {
+      conn.write("Say: Hai")
+    }
+    if (key === '\u0034') {
+      conn.write("Say: byee")
     }
   };
   stdin.on('data', handleUserInput);
